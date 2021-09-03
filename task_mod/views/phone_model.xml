@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="phonemodel_tree" model="ir.ui.view">
+        <field name="name">phone.model.tree</field>
+        <field name="model">phone.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="manuf_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="phonemodel_form" model="ir.ui.view">
+        <field name="name">phone.model.form</field>
+        <field name="model">phone.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="manuf_id"/> 
+                        </group>
+                    </group>
+                </sheet>
+                <group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="phonemodel_action" model="ir.actions.act_window">
+            <field name="name">Models</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">phone.model</field>
+            <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem id="phonefirst_root"
+            name="Phone Model"
+            sequence="10"/>
+
+        <menuitem id="phone_model_root"
+            name="Models"
+            parent="phonefirst_root"
+            sequence="10"/>
+
+        <menuitem id="phone_model"
+            name="Models"
+            parent="phone_model_root"
+            action = "phonemodel_action"
+            sequence="10"/>
+
+    
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_phone_manufacturer,access.phone.manufacturer,model_phone_manufacturer,,1,1,1,1
+access_phone_model,access.phone.model,model_phone_model,,1,1,1,1
+access_quick_create_product_wizard,access.quick.create.product.wizard,model_quick_create_product_wizard,,1,1,1,1
